@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html> 
+ <html> 
+ 	<head> 
+		<meta charset = "utf-8">
+ 		<title>圖書館借書系統</title>
+		<!--title為指定索引標籤--> 
+ 	</head> 
+ <body> 
+ 	<strong>圖書館借書系統</strong><br>
+	<!--作為文字的強調之用--> 
+ 	<form> 
+ 		<lable>書名:<input name='bookName' type='text' autofocus></input></lable><br>
+		<!--此name存變數在sever內的名稱，型態text為單行文字輸入欄位，
+		autofocus讓輸入字段在頁面加載時自動獲得焦點，最後的br是用來換行-->
+
+		<!--HTML具複寫性若有兩個autofocus，後面的autofocus會覆蓋掉前面的
+		所以結果應該會選中後面的autofocus-->
+
+		<!--name是群組名稱同一個群組只能選一個，
+		value是值是按下submit回傳給伺服器的值-->
+ 
+ 		<lable>姓名:<input name='userName' type='text'></input></lable><br> 
+ 		<lable>性別: 
+ 			<lable><input name='gender' type='radio' value='male' checked></input>男</lable> 
+ 			<lable><input name='gender' type='radio' value='female'></input>女</lable>
+			<!--型態radio定義單選按鈕，checked定義為預先選取項目--> 
+ 		</lable><br> 
+ 		<lable>學系: 
+ 			<select name='department'>
+			<!--select定義一個下拉列表，此name存變數在sever內的名稱--> 
+ 				<option value='資工' selected='true'>資工</option>
+				<!--selected定義為預先選取項目-->
+ 
+ 				<option value='電機'>電機</option> 
+ 				<option value='通訊'>通訊</option>
+				<!--此value存變數在sever內的名稱，後面才是顯示的文字-->
+  
+ 			</select> 
+ 		</lable><br> 
+ 		<input type='submit' value='借書'></input>
+		<!--型態submit為定義提交按鈕，此value存按鈕的顯示-->
+ 
+ 		<input type='reset' value='重設'></input>
+		<!--型態reset為清除，此value存按鈕的顯示--> 
+ 	</form> 
+   </body> 
+ </html> 
